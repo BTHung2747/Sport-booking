@@ -1,0 +1,25 @@
+/* Reset default root styles */
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive sidebar layout adjustments */
+@media (max-width: 1024px) {
+  .ml-\[280px\] {
+    margin-left: 240px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .ml-\[280px\] {
+    margin-left: 200px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .ml-\[280px\] {
+    margin-left: 80px !important;
+  }
+}
