@@ -49,32 +49,26 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50 font-sans flex">
+      <div className="min-h-screen bg-gray-50 font-sans">
         <Navbar user={user} onLogout={handleLogout} />
-        
-        <div className="flex-1 ml-[280px]">
-          <div className="w-full">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route 
-                path="/login" 
-                element={!user ? <Login onLogin={handleLogin} /> : <Navigate to="/" />} 
-              />
-              <Route 
-                path="/field/:id" 
-                element={<FieldDetail onBook={handleAddBooking} />} 
-              />
-              <Route 
-                path="/history" 
-                element={user ? <History bookings={bookings} onCancel={handleCancelBooking} /> : <Navigate to="/login" />} 
-              />
-              <Route 
-                path="/profile" 
-                element={<div className="p-8"><h1 className="text-2xl font-bold">Profile Page</h1><p className="mt-4">Coming soon...</p></div>} 
-              />
-              <Route path="*" element={<Navigate to="/" />} />
-            </Routes>
-          </div>
+
+        <div className="container mx-auto mt-6 pb-12">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/login"
+              element={!user ? <Login onLogin={handleLogin} /> : <Navigate to="/" />}
+            />
+            <Route
+              path="/field/:id"
+              element={<FieldDetail onBook={handleAddBooking} bookings={bookings} />}
+            />
+            <Route
+              path="/history"
+              element={user ? <History bookings={bookings} onCancel={handleCancelBooking} /> : <Navigate to="/login" />}
+            />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
         </div>
       </div>
     </Router>

@@ -131,7 +131,7 @@ const HomeFooter = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-100 pt-6 text-center">
-          <p className="text-gray-400 text-sm">© 2024 SportBook. All rights reserved.</p>
+          <p className="text-gray-400 text-sm">© 2026 SportBook. All rights reserved.</p>
         </div>
       </footer>
     </div>
